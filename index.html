@@ -3,6 +3,7 @@
 
   <head>
     <title>GRACQ Hesbaye - Vidéo Map</title>
+    <meta charset="utf8">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="">
     </script>
@@ -12,6 +13,13 @@
 
   <body>
     <style>
+      p {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        font-style: italic;
+        color:#0099cc;
+      }
       body {
         padding: 0;
         margin: 0;
@@ -82,12 +90,14 @@
         <div>
           <button id="playPauseButton">></button>
           <button id="speedButton">x1</button>
+          <p>Zoomer et cliquez sur le tracé pour naviguer dans la vidéo. Pour mettre en pause ou accélérer, cliquez sur les boutons ci-dessus. </p>
+          <div id="text-container"></div>
         </div>
-        <img src="GRACQHesbayeLogo.jpg" height="25%">
+
+		<img src="GRACQHesbayeLogo.jpg" height="25%">
       </div>
     </div>
-
-    <script>
+	<script>
       var coords = [50.6005952826, 5.3566397848]; // the geographic center of our map
       var zoomLevel = 13; // the map scale. See: http://wiki.openstreetmap.org/wiki/Zoom_levels
 
@@ -104,11 +114,22 @@
 
       // Vimeo player
       var vimeoOptions = {
-        id: 824479238,
+        id: 824700154,
         frameborder: 0,
         background: true
       };
-      var player = new Vimeo.Player('player', vimeoOptions);
+      var player = new Vimeo.Player('player', vimeoOptions);         
+      // Add time related comments under the video
+      player.on('timeupdate', function(data) {
+	      var currentTime = data.seconds;
+	      if (currentTime > 01 && currentTime < 40) {
+	        document.getElementById('text-container').innerHTML = "Cette séquence vidéo est réalisée par l'antenne locale de mobilité douce de Saint-Georges-sur-Meuse. L'objectif est de mettre en valeur un itinéraire pour rejoindre le hameau de Stockay et le centre de St-Georges à pied ou à vélo. A la suite, voici 10 constatations pour tendre vers un réseau à la fois sûr, cohérent, rapide, confortable et agréable.";
+	      } else if (currentTime > 30 && currentTime < 40) {
+	        document.getElementById('text-container').innerHTML = 'Text to display at 30-40 seconds';
+	      } else {
+	        document.getElementById('text-container').innerHTML = '';
+    	  }
+      });
       var videoDuration;
       player.getDuration().then(function(seconds) {
         videoDuration = seconds;
@@ -133,8 +154,7 @@
           speedButton.textContent = 'x' + newRate;
         });
       });
-
-      function findPointIdxOnGPXPolyline(track, latlng) {
+	  function findPointIdxOnGPXPolyline(track, latlng) {
         let closestIdx = 0;
         let shortestDistance = Number.MAX_SAFE_INTEGER;
         for (var i = 0; i < track.length; i++) {
@@ -240,7 +260,7 @@
           // Pause video if clicked on a PN
           if (clickPN !== '') {
             player.pause();
-            playPauseButton.textContent = '||';
+            playPauseButton.textContent = '|';
             clickPN = '';
           } else {
             player.play();
@@ -271,7 +291,7 @@
 
       function updateMarker() {
         player.getCurrentTime().then(function(seconds) {
-          //player.setCurrentTime(seconds+4); 
+          //player.setCurrentTime(seconds+4);
           tPlayer = seconds;
         });
 
@@ -322,7 +342,6 @@
         // Add the nearest point to the map as a marker
         L.marker([nearestPoint.geometry.coordinates[1], nearestPoint.geometry.coordinates[0]]).addTo(map);
       }
-
     </script>
   </body>
 
