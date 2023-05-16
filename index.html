@@ -2,9 +2,10 @@
 <html>
 
   <head>
-    <title>GRACQ Hesbaye - Vidéo Map</title>
+    <title>GRACQ Hesbaye - Vidéo Map</title>    
     <meta charset="utf8">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin="">
     </script>
     <script src="https://player.vimeo.com/api/player.js"></script>
@@ -15,7 +16,14 @@
     <style>
       p {
         font-family: Arial, sans-serif;
-        font-size: 16px;
+        font-size: 14px;
+        font-weight: bold;
+        font-style: italic;
+        color:#0099cc;
+      }
+      text {
+        font-family: Arial, sans-serif;
+        font-size: 14px;
         font-weight: bold;
         font-style: italic;
         color:#0099cc;
@@ -106,27 +114,50 @@
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      }).addTo(map);
+      }).addTo(map);     
+      
+      // Add markers to the map (need Jquery script)     
 
+      $.getJSON("comments.json",
+  function (geojson) {
+    L.geoJson(geojson, {
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.name);
+      },
+    }).addTo(map);
+  }
+);
+      
       var gpx = 'GS010107_1_GPS5.gpx';
 
       var clickIndex;
 
       // Vimeo player
       var vimeoOptions = {
-        id: 824700154,
+        id: 824479238,
         frameborder: 0,
         background: true
       };
-      var player = new Vimeo.Player('player', vimeoOptions);         
+      var player = new Vimeo.Player('player', vimeoOptions);
       // Add time related comments under the video
       player.on('timeupdate', function(data) {
 	      var currentTime = data.seconds;
-	      if (currentTime > 01 && currentTime < 40) {
-	        document.getElementById('text-container').innerHTML = "Cette séquence vidéo est réalisée par l'antenne locale de mobilité douce de Saint-Georges-sur-Meuse. L'objectif est de mettre en valeur un itinéraire pour rejoindre le hameau de Stockay et le centre de St-Georges à pied ou à vélo. A la suite, voici 10 constatations pour tendre vers un réseau à la fois sûr, cohérent, rapide, confortable et agréable.";
+	      if (currentTime > 01 && currentTime < 29) {
+	        document.getElementById('text-container').innerHTML = "Cette séquence vidéo est réalisée par l'antenne locale de mobilité douce de Saint-Georges-sur-Meuse. L'objectif est de mettre en valeur un itinéraire pour rejoindre le hameau de Stockay et le centre de St-Georges à pied ou à vélo. A la suite, nos constatations pour tendre vers un réseau à la fois sûr, cohérent, rapide, confortable et agréable.";
 	      } else if (currentTime > 30 && currentTime < 40) {
-	        document.getElementById('text-container').innerHTML = 'Text to display at 30-40 seconds';
-	      } else {
+	        document.getElementById('text-container').innerHTML = "Les places de stationnement de l'ancien cimetière gênent régulièrement le passage des piétons sur le trottoir.";
+	      } else if (currentTime > 56 && currentTime < 68) {
+	        document.getElementById('text-container').innerHTML = "Ici le chemin fermé mène au centre en face du sentier des blés à côté du magasin l'orangerie (permet de rejoindre l'école Don Bosco hors du trafic).";
+        } else if (currentTime > 135 && currentTime < 150) {
+	        document.getElementById('text-container').innerHTML = "Rue du Château d’Eau, déplacer le signal 50 km/h, à hauteur de la rue Bida pour faire réduire la vitesse (90 km/h) sur cette portion.";
+        } else if (currentTime > 255 && currentTime < 270) {
+	        document.getElementById('text-container').innerHTML = "Dans le bois du Warihet le passage pour les vélos et piétons est aisé sauf quand les végétations invasives rendent le chemin trop étroit...";
+        } else if (currentTime > 365 && currentTime < 385) {
+	        document.getElementById('text-container').innerHTML = "Pour traverser la rue de Yernawe, prévoir un passage pour piéton/cycliste. Sur cette portion où la circulation est plus dense, entre Warihet et Vingt Pont, pourquoi ne pas laisser la place au cyclistes/piétons sur le trottoir.";
+        } else if (currentTime > 590 && currentTime < 605) {
+	        document.getElementById('text-container').innerHTML = "Le panneau intertdit de tourner à gauche. Or il existait un marquage pour le passage des vélos vers la rue Neuve depuis la rue Vingt Ponts. Celui-ci est complètement effacé et celui de la rue Neuve peu visible.";
+
+        } else {
 	        document.getElementById('text-container').innerHTML = '';
     	  }
       });
@@ -203,19 +234,21 @@
       }
 
       var clickPN = '';
-      var trkpts = loadGPXFile('GS010107_1_GPS5.gpx');
-
+      var trkpts = loadGPXFile('GS010107_1_GPS5.gpx');      
+      
       var dataPN;
       async function addGeoJson() {
         const response = await fetch("PNall.geojson");
         const data = await response.json();
 
+        // Node network ways
         dataPN = L.geoJson(data, {
           style: {
             color: 'green',
             weight: 6,
             opacity: 1
           },
+          // Node network node circles
           pointToLayer: function(feature, latlng) {
             return L.circleMarker(latlng, {
               radius: 12,
@@ -228,17 +261,19 @@
 
         dataPN.addTo(map);
 
+        // Thick transparent layer with easy clicking
         L.geoJson(data, {
           style: {
             color: 'transparent',
             weight: 36, // to ease clicking on mobile devices
             opacity: 1
           },
+          // Node network node numbers
           pointToLayer: function(feature, latlng) {
             return L.marker(latlng, {
               icon: L.divIcon({
                 className: 'my-div-icon',
-                html: feature.properties.rcn_ref,
+                html: feature.properties.id, // was set to "rcn_ref" but changed to "id" for other purpose
                 iconSize: [24, 24],
                 iconAnchor: [12, 12]
               })
@@ -260,7 +295,7 @@
           // Pause video if clicked on a PN
           if (clickPN !== '') {
             player.pause();
-            playPauseButton.textContent = '|';
+            playPauseButton.textContent = '||';
             clickPN = '';
           } else {
             player.play();
