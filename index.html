@@ -107,7 +107,7 @@
         <div id="text-container"></div>
         <div class="container">
           <p>Zoom/Clique pour naviguer</p>
-          <button id="playPauseButton">>PLAY</button>
+          <button id="playPauseButton">IIPAUSE</button>
           <button id="speedButton">x1</button>
         </div>
       
@@ -189,10 +189,10 @@
         player.getPaused().then(function(paused) {
           if (paused) {
             player.play();
-            playPauseButton.textContent = '>PLAY';
+            playPauseButton.textContent = '||PAUSE';
           } else {
             player.pause();
-            playPauseButton.textContent = '||PAUSE';
+            playPauseButton.textContent = '>PLAY';
           }
         });
       });
@@ -314,7 +314,7 @@
           // Pause video if clicked on a PN
           if (clickPN !== '') {
             player.pause();
-            playPauseButton.textContent = '||PAUSE';
+            playPauseButton.textContent = '>PLAY';
             clickPN = '';
           } else {
             player.play();
