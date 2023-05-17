@@ -6,81 +6,83 @@
         {
             "type": "Feature",
             "properties": {
-                "id": "2"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    5.35640025496,
-                    50.59887170603
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "highway": "tertiary",
-                "maxspeed": "50",
-                "name:etymology:wikidata": "Q230238",
-                "name": "Rue Reine Astrid",
-                "@id": "way/24020837",
-                "surface": "asphalt"
-            },
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
-                        5.35952040000,
-                        50.58564080000
-                    ],
-                    [
-                        5.35933840000,
-                        50.58538540000
-                    ],
-                    [
-                        5.35927300000,
-                        50.58529370000
-                    ],
-                    [
-                        5.35871300000,
-                        50.58443400000
-                    ],
-                    [
-                        5.35865250000,
-                        50.58432660000
-                    ],
-                    [
-                        5.35849640000,
-                        50.58410870000
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "highway": "tertiary",
                 "cycleway:both": "no",
                 "maxspeed": "50",
-                "name:etymology:wikidata": "Q230238",
-                "name": "Rue Reine Astrid",
+                "lane_markings": "no",
+                "oneway": "no",
+                "@id": "way/7971652",
+                "sidewalk": "both",
                 "surface": "asphalt",
-                "@id": "way/1064049181"
+                "highway": "residential",
+                "name": "Rue Yernawe"
             },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
                     [
-                        5.35849640000,
-                        50.58410870000
+                        5.34589650000,
+                        50.59015420000
                     ],
                     [
-                        5.35838850000,
-                        50.58395710000
+                        5.34656850000,
+                        50.58978230000
                     ],
                     [
-                        5.35789040000,
-                        50.58324230000
+                        5.34701390000,
+                        50.58961780000
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "highway": "tertiary",
+                "maxspeed": "50",
+                "name": "Rue du Centre",
+                "maxweight:conditional": "none @ delivery",
+                "@id": "way/7336456",
+                "maxweight": "7.5",
+                "maxweight:bus": "none"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        5.35685120000,
+                        50.59914000000
+                    ],
+                    [
+                        5.35698180000,
+                        50.59922810000
+                    ],
+                    [
+                        5.35748580000,
+                        50.59956650000
+                    ],
+                    [
+                        5.35755680000,
+                        50.59962200000
+                    ],
+                    [
+                        5.35761060000,
+                        50.59968070000
+                    ],
+                    [
+                        5.35764270000,
+                        50.59977670000
+                    ],
+                    [
+                        5.35765190000,
+                        50.59987440000
+                    ],
+                    [
+                        5.35765670000,
+                        50.59997720000
+                    ],
+                    [
+                        5.35763700000,
+                        50.60006070000
                     ]
                 ]
             }
@@ -89,7 +91,43 @@
             "type": "Feature",
             "properties": {
                 "maxspeed": "50",
+                "lane_markings": "no",
+                "lit": "yes",
+                "name": "Rue Albert Ier",
+                "sidewalk:both:surface": "paved",
+                "maxweight:bus": "none",
+                "highway": "tertiary",
+                "sidewalk:both": "yes",
+                "alt_name": "Rue Albert 1er",
+                "maxweight:conditional": "none @ delivery",
+                "maxweight": "7.5",
+                "surface": "asphalt",
+                "@id": "way/1115575637",
+                "maxwidth": "7"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        5.35763700000,
+                        50.60006070000
+                    ],
+                    [
+                        5.35732300000,
+                        50.60016200000
+                    ],
+                    [
+                        5.35704270000,
+                        50.60025410000
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "@id": "way/7971650",
+                "maxspeed": "50",
                 "lane_markings": "no",
                 "surface": "asphalt",
                 "highway": "residential",
@@ -124,228 +162,9 @@
         {
             "type": "Feature",
             "properties": {
-                "cycleway:both": "no",
-                "maxspeed": "50",
-                "lane_markings": "no",
-                "oneway": "no",
-                "@id": "way/7971652",
-                "sidewalk": "both",
-                "surface": "asphalt",
-                "highway": "residential",
-                "name": "Rue Yernawe"
-            },
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
-                        5.34589650000,
-                        50.59015420000
-                    ],
-                    [
-                        5.34656850000,
-                        50.58978230000
-                    ],
-                    [
-                        5.34701390000,
-                        50.58961780000
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "id": "3"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    5.35247012839,
-                    50.59641750953
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "highway": "tertiary",
-                "maxspeed": "50",
-                "surface": "asphalt",
-                "@id": "way/977125805"
-            },
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
-                        5.35970060000,
-                        50.58575530000
-                    ],
-                    [
-                        5.35952040000,
-                        50.58564080000
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "highway": "tertiary",
-                "maxspeed": "50",
-                "@id": "way/458115911",
-                "name:etymology:wikidata": "Q230238",
-                "cycleway:right": "no",
-                "name": "Rue Reine Astrid",
-                "surface": "asphalt",
-                "oneway": "yes",
-                "lanes": "1"
-            },
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
-                        5.35645010000,
-                        50.58117060000
-                    ],
-                    [
-                        5.35699100000,
-                        50.58193110000
-                    ],
-                    [
-                        5.35710420000,
-                        50.58213550000
-                    ],
-                    [
-                        5.35722760000,
-                        50.58233090000
-                    ],
-                    [
-                        5.35738000000,
-                        50.58251490000
-                    ],
-                    [
-                        5.35752410000,
-                        50.58271250000
-                    ],
-                    [
-                        5.35760710000,
-                        50.58280990000
-                    ],
-                    [
-                        5.35762770000,
-                        50.58283420000
-                    ],
-                    [
-                        5.35767220000,
-                        50.58288660000
-                    ],
-                    [
-                        5.35776520000,
-                        50.58301950000
-                    ],
-                    [
-                        5.35789040000,
-                        50.58324230000
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "highway": "tertiary",
-                "maxspeed": "50",
-                "@id": "way/371973848",
-                "maxspeed:type": "sign",
-                "surface": "asphalt",
-                "name": "Boulevard des Combattants"
-            },
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
-                        5.36078350000,
-                        50.58601650000
-                    ],
-                    [
-                        5.36040770000,
-                        50.58593600000
-                    ],
-                    [
-                        5.36014880000,
-                        50.58587660000
-                    ],
-                    [
-                        5.35992380000,
-                        50.58582060000
-                    ],
-                    [
-                        5.35970060000,
-                        50.58575530000
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "maxspeed": "30",
-                "lit": "yes",
-                "name": "Rue Eloi Fouarge",
-                "surface": "asphalt",
-                "@id": "way/7339142",
-                "highway": "residential",
-                "maxspeed:type": "BE:zone30"
-            },
-            "geometry": {
-                "type": "LineString",
-                "coordinates": [
-                    [
-                        5.36079180266,
-                        50.58730830491
-                    ],
-                    [
-                        5.36049940000,
-                        50.58729050000
-                    ],
-                    [
-                        5.36059010000,
-                        50.58682610000
-                    ],
-                    [
-                        5.36062500000,
-                        50.58648990000
-                    ],
-                    [
-                        5.36068380000,
-                        50.58621980000
-                    ],
-                    [
-                        5.36078350000,
-                        50.58601650000
-                    ]
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "id": "6"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    5.35460221680,
-                    50.58208082816
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "name": "Rue Warihet",
-                "maxspeed": "50",
                 "@id": "way/134679736",
+                "maxspeed": "50",
+                "name": "Rue Warihet",
                 "lane_markings": "no",
                 "maxspeed:type": "sign",
                 "surface": "asphalt",
@@ -424,12 +243,127 @@
         {
             "type": "Feature",
             "properties": {
+                "id": "4"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.35061185671,
+                    50.59258160919
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "highway": "footway",
+                "surface": "dirt",
+                "@id": "way/848161870"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        5.34974110000,
+                        50.59167640000
+                    ],
+                    [
+                        5.34979440000,
+                        50.59173900000
+                    ],
+                    [
+                        5.34983080000,
+                        50.59186020000
+                    ],
+                    [
+                        5.34985960000,
+                        50.59198580000
+                    ],
+                    [
+                        5.34984150000,
+                        50.59207080000
+                    ],
+                    [
+                        5.34986170000,
+                        50.59215080000
+                    ],
+                    [
+                        5.34993000000,
+                        50.59223210000
+                    ],
+                    [
+                        5.35028830000,
+                        50.59235750000
+                    ],
+                    [
+                        5.35061730000,
+                        50.59251950000
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.35640025496,
+                    50.59887170603
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "highway": "tertiary",
+                "maxspeed": "50",
+                "name:etymology:wikidata": "Q230238",
+                "name": "Rue Reine Astrid",
+                "@id": "way/24020837",
+                "surface": "asphalt"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        5.35952040000,
+                        50.58564080000
+                    ],
+                    [
+                        5.35933840000,
+                        50.58538540000
+                    ],
+                    [
+                        5.35927300000,
+                        50.58529370000
+                    ],
+                    [
+                        5.35871300000,
+                        50.58443400000
+                    ],
+                    [
+                        5.35865250000,
+                        50.58432660000
+                    ],
+                    [
+                        5.35849640000,
+                        50.58410870000
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
                 "maxspeed": "50",
                 "@id": "way/1064049178",
                 "surface": "asphalt",
                 "highway": "residential",
-                "oneway": "yes",
-                "name": "Rue Basse Marquet"
+                "name": "Rue Basse Marquet",
+                "oneway": "yes"
             },
             "geometry": {
                 "type": "LineString",
@@ -452,34 +386,48 @@
         {
             "type": "Feature",
             "properties": {
-                "maxspeed": "30",
-                "cycleway:right": "no",
-                "oneway:bicycle": "no",
-                "name": "Rue Neuve",
-                "cycleway:left": "shared_lane",
-                "@id": "way/7971743",
+                "id": "3"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.35247012839,
+                    50.59641750953
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "highway": "tertiary",
+                "maxspeed": "50",
+                "@id": "way/371973848",
+                "maxspeed:type": "sign",
                 "surface": "asphalt",
-                "highway": "residential",
-                "oneway": "yes"
+                "name": "Boulevard des Combattants"
             },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
                     [
-                        5.35645010000,
-                        50.58117060000
+                        5.36078350000,
+                        50.58601650000
                     ],
                     [
-                        5.35521300000,
-                        50.58187930000
+                        5.36040770000,
+                        50.58593600000
                     ],
                     [
-                        5.35520180000,
-                        50.58188570000
+                        5.36014880000,
+                        50.58587660000
                     ],
                     [
-                        5.35497940000,
-                        50.58195180000
+                        5.35992380000,
+                        50.58582060000
+                    ],
+                    [
+                        5.35970060000,
+                        50.58575530000
                     ]
                 ]
             }
@@ -487,39 +435,13 @@
         {
             "type": "Feature",
             "properties": {
-                "id": "4"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    5.35061185671,
-                    50.59258160919
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
-                "id": "5"
-            },
-            "geometry": {
-                "type": "Point",
-                "coordinates": [
-                    5.34601407173,
-                    50.59026225777
-                ]
-            }
-        },
-        {
-            "type": "Feature",
-            "properties": {
                 "maxspeed": "50",
-                "lane_markings": "no",
                 "@id": "way/134679729",
+                "lane_markings": "no",
                 "name": "Rue Bida",
                 "maxspeed:type": "sign",
-                "surface": "asphalt",
-                "highway": "unclassified"
+                "highway": "unclassified",
+                "surface": "asphalt"
             },
             "geometry": {
                 "type": "LineString",
@@ -606,35 +528,28 @@
         {
             "type": "Feature",
             "properties": {
-                "maxspeed": "50",
-                "lit": "yes",
-                "lane_markings": "no",
-                "name": "Rue Albert Ier",
-                "sidewalk:both:surface": "paved",
-                "maxweight:bus": "none",
-                "sidewalk:both": "yes",
+                "cycleway:both": "no",
                 "highway": "tertiary",
-                "alt_name": "Rue Albert 1er",
-                "maxweight:conditional": "none @ delivery",
+                "maxspeed": "50",
+                "name:etymology:wikidata": "Q230238",
+                "name": "Rue Reine Astrid",
                 "surface": "asphalt",
-                "maxweight": "7.5",
-                "@id": "way/1115575637",
-                "maxwidth": "7"
+                "@id": "way/1064049181"
             },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
                     [
-                        5.35763700000,
-                        50.60006070000
+                        5.35849640000,
+                        50.58410870000
                     ],
                     [
-                        5.35732300000,
-                        50.60016200000
+                        5.35838850000,
+                        50.58395710000
                     ],
                     [
-                        5.35704270000,
-                        50.60025410000
+                        5.35789040000,
+                        50.58324230000
                     ]
                 ]
             }
@@ -655,48 +570,138 @@
         {
             "type": "Feature",
             "properties": {
-                "highway": "footway",
-                "surface": "dirt",
-                "@id": "way/848161870"
+                "maxspeed": "30",
+                "lit": "yes",
+                "name": "Rue Eloi Fouarge",
+                "@id": "way/7339142",
+                "surface": "asphalt",
+                "highway": "residential",
+                "maxspeed:type": "BE:zone30"
             },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
                     [
-                        5.34974110000,
-                        50.59167640000
+                        5.36079180266,
+                        50.58730830491
                     ],
                     [
-                        5.34979440000,
-                        50.59173900000
+                        5.36049940000,
+                        50.58729050000
                     ],
                     [
-                        5.34983080000,
-                        50.59186020000
+                        5.36059010000,
+                        50.58682610000
                     ],
                     [
-                        5.34985960000,
-                        50.59198580000
+                        5.36062500000,
+                        50.58648990000
                     ],
                     [
-                        5.34984150000,
-                        50.59207080000
+                        5.36068380000,
+                        50.58621980000
                     ],
                     [
-                        5.34986170000,
-                        50.59215080000
+                        5.36078350000,
+                        50.58601650000
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "id": "5"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.34629033926,
+                    50.59049724802
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "highway": "tertiary",
+                "maxspeed": "50",
+                "surface": "asphalt",
+                "@id": "way/977125805"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        5.35970060000,
+                        50.58575530000
                     ],
                     [
-                        5.34993000000,
-                        50.59223210000
+                        5.35952040000,
+                        50.58564080000
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "highway": "tertiary",
+                "maxspeed": "50",
+                "@id": "way/458115911",
+                "name:etymology:wikidata": "Q230238",
+                "cycleway:right": "no",
+                "name": "Rue Reine Astrid",
+                "surface": "asphalt",
+                "lanes": "1",
+                "oneway": "yes"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        5.35645010000,
+                        50.58117060000
                     ],
                     [
-                        5.35028830000,
-                        50.59235750000
+                        5.35699100000,
+                        50.58193110000
                     ],
                     [
-                        5.35061730000,
-                        50.59251950000
+                        5.35710420000,
+                        50.58213550000
+                    ],
+                    [
+                        5.35722760000,
+                        50.58233090000
+                    ],
+                    [
+                        5.35738000000,
+                        50.58251490000
+                    ],
+                    [
+                        5.35752410000,
+                        50.58271250000
+                    ],
+                    [
+                        5.35760710000,
+                        50.58280990000
+                    ],
+                    [
+                        5.35762770000,
+                        50.58283420000
+                    ],
+                    [
+                        5.35767220000,
+                        50.58288660000
+                    ],
+                    [
+                        5.35776520000,
+                        50.58301950000
+                    ],
+                    [
+                        5.35789040000,
+                        50.58324230000
                     ]
                 ]
             }
@@ -707,14 +712,14 @@
                 "cycleway:both": "no",
                 "maxspeed": "30",
                 "lit": "yes",
-                "zone:traffic": "BE-WAL:urban",
-                "source:maxspeed": "BE:zone30",
                 "sidewalk": "both",
+                "source:maxspeed": "BE:zone30",
+                "zone:traffic": "BE-WAL:urban",
                 "name": "Rue Vingt Ponts",
                 "surface": "asphalt",
                 "highway": "residential",
-                "maxspeed:type": "BE:zone30",
-                "@id": "way/97962034"
+                "@id": "way/97962034",
+                "maxspeed:type": "BE:zone30"
             },
             "geometry": {
                 "type": "LineString",
@@ -841,52 +846,47 @@
         {
             "type": "Feature",
             "properties": {
-                "highway": "tertiary",
-                "maxspeed": "50",
-                "name": "Rue du Centre",
-                "maxweight:conditional": "none @ delivery",
-                "maxweight": "7.5",
-                "@id": "way/7336456",
-                "maxweight:bus": "none"
+                "id": "6"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    5.35460221680,
+                    50.58208082816
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "maxspeed": "30",
+                "cycleway:right": "no",
+                "cycleway:left": "shared_lane",
+                "name": "Rue Neuve",
+                "oneway:bicycle": "no",
+                "@id": "way/7971743",
+                "surface": "asphalt",
+                "highway": "residential",
+                "oneway": "yes"
             },
             "geometry": {
                 "type": "LineString",
                 "coordinates": [
                     [
-                        5.35685120000,
-                        50.59914000000
+                        5.35645010000,
+                        50.58117060000
                     ],
                     [
-                        5.35698180000,
-                        50.59922810000
+                        5.35521300000,
+                        50.58187930000
                     ],
                     [
-                        5.35748580000,
-                        50.59956650000
+                        5.35520180000,
+                        50.58188570000
                     ],
                     [
-                        5.35755680000,
-                        50.59962200000
-                    ],
-                    [
-                        5.35761060000,
-                        50.59968070000
-                    ],
-                    [
-                        5.35764270000,
-                        50.59977670000
-                    ],
-                    [
-                        5.35765190000,
-                        50.59987440000
-                    ],
-                    [
-                        5.35765670000,
-                        50.59997720000
-                    ],
-                    [
-                        5.35763700000,
-                        50.60006070000
+                        5.35497940000,
+                        50.58195180000
                     ]
                 ]
             }
